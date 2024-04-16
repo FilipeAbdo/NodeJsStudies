@@ -1,7 +1,8 @@
 var http = require("http");
 
 http.createServer(function(req, resp){
-    resp.end("<h1>Bem vindo ao meu site!</h1><h4>www.guiadoprogramador.com</h4>");
+    var ip = require("ip");
+    resp.end("<h1>Bem ao Raspberry PI 4!</h1><h4>Testing Server</h4><h4>IP is: " + ip.address() + "</h4>" );
 }).listen(80);
 
-console.log("Meu servdor está rodando!")
+console.log("Meu servidor está rodando!")
